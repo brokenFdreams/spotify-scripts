@@ -148,7 +148,7 @@ fun createOrUpdatePlaylist(
     tracks: List<TrackSimplified>
 ): Playlist {
     val playlist = spotifyApi.createPlaylist(userId, playlistName)
-        .public_(true)
+        .public_(false)
         .description("Weekly new releases from followed artists")
         .build()
         .execute()
